@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Intrusion Detection</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Poultry Intrusion Detection System</h1>
+            <p>Select either real-time video feed or upload an image for detection.</p>
+        </header>
+
+        <div class="mode-selection">
+            <button onclick="showVideoFeed()">Real-Time Video Feed</button>
+            <button onclick="showImageUpload()">Upload Image</button>
+        </div>
+
+        <section id="video-section" class="hidden">
+            <h2>Live Video Feed</h2>
+            <div class="video-container">
+                <img src="/video_feed" id="videoFeed" alt="Video Feed">
+            </div>
+        </section>
+
+        <section id="upload-section" class="hidden">
+            <h2>Upload Image</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" accept="image/*">
+                <button type="button" onclick="uploadImage()">Detect</button>
+            </form>
+            <div id="detectionResults"></div>
+        </section>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
