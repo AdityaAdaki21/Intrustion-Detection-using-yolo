@@ -24,7 +24,7 @@ async function uploadImage() {
             method: "POST",
             body: formData,
         });
-        
+
         const data = await response.json();
         displayResults(data);
     } catch (error) {
