@@ -46,11 +46,10 @@ function displayResults(detections) {
         item.classList.add("result-item");
         item.innerHTML = `
             <p><strong>Detection ${index + 1}</strong></p>
-            <p>Class ID: ${detection.class}</p>
+            <p>Class: ${detection.class}</p>
             <p>Confidence: ${(detection.confidence * 100).toFixed(2)}%</p>
             <p>Bounding Box: [${detection.box.join(", ")}]</p>
         `;
         resultsDiv.appendChild(item);
     });
 }
-
